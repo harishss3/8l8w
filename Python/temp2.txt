@@ -1,0 +1,11 @@
+[GK]Gianluigi Buffon
+[RB]Philip Lahm
+[LB]Marcelo
+[CB]Carles Puyol
+[CB]Virgil van Dijk
+[CM]Xavi
+[CM]Andres Iniesta
+[CDM]N'golo Kante
+[CAM]Lionel Messi
+[ST]Cristiano Ronaldo
+[ST]Ronaldo Nazario
