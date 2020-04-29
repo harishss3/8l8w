@@ -16,13 +16,6 @@ my_parser.add_argument('-E',action='store_true',help='print $ at the end of each
 args = my_parser.parse_args()
 
 input_name = args.Name
-'''
-flag = 1
-for name in input_name:
-	if '>' in name:
-		flag = 0
-''' 
-file=1;
 
 for name in input_name:
 	try:
@@ -38,5 +31,4 @@ for name in input_name:
 				i=i+1
 			print(line,end=endwith)
 	except:
-		print('File',file,'does not exist!')
-	file=file+1;
+		print('!!File',name,'does not exist!!')
