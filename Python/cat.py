@@ -16,10 +16,9 @@ my_parser.add_argument('-E',action='store_true',help='print $ at the end of each
 args = my_parser.parse_args()
 
 input_name = args.Name
-
+i=1
 for name in input_name:
 	try:
-		i=1
 		fhand = open(name)
 		endwith='\n'
 		if args.E:
