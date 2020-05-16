@@ -43,20 +43,6 @@ map1 = Map.fromList [("hundred",100),("one",1),("two",2),("three",3),("four",4),
 mapInv = transMap map1
 
 listBigInt = ["","thousand","million","billion","trillion","Quadrillion","Quintillion"]
--- --------------------------------------------------------------------------------------------------------------
--- Building the second function
-convToInt w = fromJust (Map.lookup w map1)
-
-convToInt' w = if ('h' `elem` w)&&('u' `elem` w)&&('n' `elem` w)
-               then product[convToInt num| num <- words w]
-               else sum[convToInt num| num <- words w]
-
-conv3dig w = sum[convToInt' num| num <- splitOn " and " w]
-
-w2n :: [Char] -> Integer
-w2n w = if (last (words w)) `elem` listBigInt
-        then product[conv3dig num| num <- [unwords (init (words w)),last (words w)]]
-        else conv3dig w
 -- ---------------------------------------------------------------------------------------------------------------
 -- Building the first function
 splitNum :: Integer -> [Integer]
@@ -73,7 +59,22 @@ twoDigToW n
 threeDigToW n
           | n>99 = intToW (n `div` 100) ++ " hundred and " ++ twoDigToW (n `mod` 100)
           | otherwise = twoDigToW n
+-- --------------------------------------------------------------------------------------------------------------
+-- Building the second function
+convToInt w = fromJust (Map.lookup w map1)
+
+convToInt' w = if ('h' `elem` w)&&('u' `elem` w)&&('n' `elem` w)
+               then product[convToInt num| num <- words w]
+               else sum[convToInt num| num <- words w]
+
+conv3dig w = sum[convToInt' num| num <- splitOn " and " w]
+
+w2n :: [Char] -> Integer
+w2n w = if (last (words w)) `elem` listBigInt
+        then product[conv3dig num| num <- [unwords (init (words w)),last (words w)]]
+        else conv3dig w
 -- ---------------------------------------------------------------------------------------------------------------
+-- Building the fifth question
 isInt :: Char -> Bool
 isInt n = if (ord n < 58) && (ord n > 46)
           then True
