@@ -1,4 +1,4 @@
-# Tasks
+## Tasks
 
 A. The task was to implement the following simple functions:
    1. word2int :: [Char] -> Integer
