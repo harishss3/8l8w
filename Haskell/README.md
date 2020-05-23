@@ -11,6 +11,6 @@ A. The task was to implement the following simple functions:
    4. myFilter :: (a -> Bool) -> [a] -> [a]
       filter function without recursion
    5. string2int :: [Char] -> Integer
-      Converts a number in string to an integer. Returns -1 if no number is found in the string.
+      Converts a number in string to an integer. Returns -1 if no number is found in the string.</br>
    To use the functions, please load the tasks_module.hs file.
 
