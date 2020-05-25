@@ -13,4 +13,7 @@ A. The task was to implement the following simple functions:
    5. string2int :: [Char] -> Integer
       Converts a number in string to an integer. Returns -1 if no number is found in the string.</br>
    To use the functions, please load the tasks_module.hs file.
-
+   
+  B. parNum.hs module has a function which can be used to find out n-parsitic number given the value of n and the last digit.</br></br>
+     e.g. parNum n x d will return an n-parasitic number with last digit d and minimum of x digits long. Note that numbers with                            leading zeroes haven't been considered and program can run on infinite loop if such a number is searched for.
+Parasitic numbers : https://en.wikipedia.org/wiki/Parasitic_number
