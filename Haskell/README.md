@@ -16,5 +16,10 @@ A. The task was to implement the following simple functions:
    
   B. parNum.hs module has a function which can be used to find out n-parsitic number given the value of n and the last digit. e.g. parNum n x d will return an n-parasitic number with last digit d and minimum of x digits long. Note that numbers with                            leading zeroes haven't been considered and program can run on infinite loop if such a number is searched for.
 Parasitic numbers : https://en.wikipedia.org/wiki/Parasitic_number</br></br>
-C. Resources for Haskell</br>
+C. Partitions
+   partitions.hs module has two functions, one for listing the partitions of an integer and the other for finding out the number of partitions of an integer.
+   1. party :: Int -> [[Int]]
+   2. num_party :: Int -> Int <br><br>
+
+D. Resources for Haskell</br>
 The book/website "Learn you a haskell for great good" will help you get started : http://learnyouahaskell.com/chapters
